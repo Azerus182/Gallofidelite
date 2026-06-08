@@ -1,0 +1,131 @@
+/* =============================================
+   auth.css — Styles pour login, forgot, reset
+   ============================================= */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body::before {
+  background: rgba(0,0,0,0.52);
+}
+
+/* ---- Zone centrée ---- */
+.wrap {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* ---- Carte formulaire ---- */
+.card {
+  border-radius: 16px;
+  padding: 40px 36px;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+}
+.card h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #e63012;
+  margin-bottom: 8px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.card p.sub {
+  text-align: center;
+  color: #999;
+  font-size: .85rem;
+  margin-bottom: 24px;
+}
+
+/* ---- Bouton connexion pleine largeur ---- */
+.btn-login {
+  width: 100%;
+  margin-top: 24px;
+  padding: 13px;
+  background: #e63012;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+}
+.btn-login:hover  { background: #c4260e; }
+.btn-login:active { transform: scale(.98); }
+
+.btn {
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* ---- Erreur connexion ---- */
+.erreur {
+  background: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: .9rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ---- Liens retour ---- */
+.hint {
+  text-align: center;
+  font-size: .8rem;
+  color: #aaa;
+  margin-top: 16px;
+}
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: #e63012;
+  text-decoration: none;
+  font-size: .9rem;
+}
+.back:hover { text-decoration: underline; }
+
+/* ---- Étapes reset ---- */
+.step-badge {
+  display: inline-block;
+  background: #fef0ec;
+  color: #e63012;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* ---- Bouton lien succès ---- */
+.btn-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: white;
+  background: #27ae60;
+  padding: 13px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.compte-badge {
+  display: inline-block;
+  background: #fef0ec;
+  color: #e63012;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-weight: 700;
+  font-size: .85rem;
+}

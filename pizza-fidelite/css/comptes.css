@@ -1,0 +1,55 @@
+/* =============================================
+   comptes.css — Styles spécifiques à comptes.php
+   ============================================= */
+
+.container { max-width: 700px; }
+
+.form-group { margin-bottom: 14px; }
+
+/* ---- Tableau des comptes ---- */
+table { width: 100%; border-collapse: collapse; }
+
+th {
+  text-align: left;
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: #999;
+  padding: 8px 10px;
+  border-bottom: 2px solid #f0ebe5;
+}
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f5f0eb;
+  vertical-align: middle;
+}
+tr:last-child td { border-bottom: none; }
+
+.login-badge {
+  background: #fef0ec;
+  color: #e63012;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: .9rem;
+}
+.you {
+  font-size: .75rem;
+  color: #27ae60;
+  margin-left: 6px;
+}
+.actions-td { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ---- Modal MDP ---- */
+.modal {
+  text-align: left;
+}
+.modal h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #e63012;
+  text-align: left;
+}
+.modal-btns {
+  justify-content: flex-end;
+  margin-top: 20px;
+}

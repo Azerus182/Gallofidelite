@@ -1,0 +1,119 @@
+/* =============================================
+   app.css — Styles spécifiques à index.php
+   ============================================= */
+
+/* ---- Formulaire d'ajout client ---- */
+.form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.form-row input {
+  flex: 1;
+  min-width: 160px;
+}
+
+/* ---- Barre de recherche ---- */
+#search {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e0d8d0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#search:focus { outline: none; border-color: #e63012; }
+
+/* ---- Liste clients ---- */
+#liste { display: flex; flex-direction: column; gap: 14px; }
+
+.client-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-left: 5px solid #e0d8d0;
+  transition: border-color .2s;
+}
+.client-card.has-prize {
+  border-left-color: #f1c40f;
+  background: #fffbec;
+}
+
+.client-info  { flex: 1; min-width: 140px; }
+.client-name  { font-size: 1.1rem; font-weight: 700; }
+.client-sub   { font-size: .85rem; color: #888; margin-top: 2px; }
+
+/* ---- Pastilles de points ---- */
+.points-area    { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.points-display { display: flex; gap: 4px; align-items: center; }
+
+.dot {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: #e0d8d0;
+  display: inline-block;
+  transition: background .2s;
+}
+.dot.filled { background: #e63012; }
+
+.points-text {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #e63012;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ---- Badge pizza offerte ---- */
+.badge-offerte {
+  background: #f1c40f;
+  color: #7d6000;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
+/* ---- Actions ---- */
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* ---- Message vide ---- */
+.empty { text-align: center; color: #bbb; font-size: 1.1rem; padding: 40px 0; }
+
+/* ---- Toast notification ---- */
+#toast {
+  position: fixed;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: .95rem;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+  z-index: 999;
+  pointer-events: none;
+  white-space: nowrap;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ---- Input points dans modal ---- */
+#inputPts {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0d8d0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 540px) {
+  .client-card { flex-direction: column; align-items: flex-start; }
+}
